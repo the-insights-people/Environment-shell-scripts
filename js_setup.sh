@@ -2,12 +2,21 @@
 MAGENTA="\e[1;45m"
 ENDCOLOUR="\e[0m"
 
+#!/bin/bash
+MAGENTA="\e[1;45m"
+ENDCOLOUR="\e[0m"
+
+echo "Which Portal should be set up?"
+read PORTAL_NUMBER
+
+echo "Setting up portal_v$PORTAL_NUMBER"
+
 printf "${MAGENTA}Initialise vagrant box ${ENDCOLOUR}"
 cd /c/users/JordanShaw/Homestead
 vagrant up
 
 printf "${MAGENTA}Open code ${ENDCOLOUR}"
-code /c/users/JordanShaw/Web/portal_v4
+code /c/users/JordanShaw/Web/portal_v$PORTAL_NUMBER
 
 printf "${MAGENTA}Generate filename ${ENDCOLOUR}"
 txtFilename=`date +%d%m%Y.txt`
@@ -23,4 +32,3 @@ vim /c/users/JordanShaw/Desktop/slack_updates/$txtFilename
 
 
 exit
-
