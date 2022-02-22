@@ -11,3 +11,6 @@ if [ -f ~/.bash_aliases ]; then
 . ~/.bash_aliases
 fi
 ```
+
+## N.B.
+To use this on your machines you will have to swap out relevant filepaths in the setup script so that they point towards where you keep the script, homestead box, and code. 
